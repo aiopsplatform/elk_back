@@ -1,0 +1,21 @@
+PUT elk_log_type
+PUT /elk_log_type/info/_mapping
+{
+  "info":{
+    "properties":{
+              "id":{"type":"text","index":false},
+              "name":{"type":"text","index":false}
+    }
+  }
+}
+GET elk_log_type/_mapping
+POST elk_log_type/info
+{
+  "id":1,
+  "name":"nginx"
+}
+POST elk_log_type/info
+{
+  "id":2,
+  "name":"tomcat"
+}
