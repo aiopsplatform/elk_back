@@ -1,5 +1,5 @@
-PUT elk_log_type
-PUT /elk_log_type/info/_mapping
+PUT elk_log_type //创建索引名称
+PUT /elk_log_type/info/_mapping  //创建mapping
 {
   "info":{
     "properties":{
@@ -8,8 +8,8 @@ PUT /elk_log_type/info/_mapping
     }
   }
 }
-GET elk_log_type/_mapping
-POST elk_log_type/info
+GET elk_log_type/_mapping  //查看创建的mapping
+POST elk_log_type/info   //插入数据
 {
   "id":1,
   "name":"nginx"
